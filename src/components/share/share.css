@@ -13,6 +13,7 @@
 .shareTop {
     display: flex;
     align-items: center;
+    margin-top: 10px;
 }
 
 .shareProfileImg{
@@ -21,6 +22,7 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 .shareInput{
@@ -34,4 +36,44 @@
 
 .shareHr{
     margin: 20px;
+}
+
+.shareBottom{
+    display: flex;
+}
+
+.shareOptions{
+    display: flex;
+    margin-left: 20px;
+    margin-right: 30px;
+
+}
+
+.shareOption{
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    cursor: pointer
+}
+
+.shareIcon{
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.shareOptionText{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.shareButton{
+    border: none;
+    border-radius: 5px;
+    padding: 7px;
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background-color:green;
+    color: white;
+    cursor: pointer;
 }

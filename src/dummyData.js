@@ -7,47 +7,47 @@ export const Users = [
     {
         id: 2,
         profilePicture: "assets/person/2.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Alejandro Martínez'
     },
     {
         id: 3,
         profilePicture: "assets/person/3.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Maria Andrade'
     },
     {
         id: 4,
         profilePicture: "assets/person/4.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Rosa Bustos'
     },
     {
         id: 5,
         profilePicture: "assets/person/5.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Helena Ramírez'
     },
     {
         id: 6,
         profilePicture: "assets/person/6.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Carlota Fer'
     },
     {
         id: 7,
         profilePicture: "assets/person/7.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Nerea Puig'
     },
     {
         id: 8,
         profilePicture: "assets/person/8.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'David López'
     },
     {
         id: 9,
         profilePicture: "assets/person/9.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'Sandra Cabrera'
     },
     {
         id: 10,
         profilePicture: "assets/person/10.jpeg",
-        username: 'Rebeca Pérez'
+        username: 'John Talabot'
     },
 ] 
 

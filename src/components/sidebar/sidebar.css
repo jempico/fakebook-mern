@@ -5,7 +5,7 @@
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
     background-color: #f1f1f1;
@@ -13,6 +13,7 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: rgb(179, 179, 179);
+    border-radius: 8px;
 }
 
 .sidebarWrapper{
@@ -56,6 +57,7 @@
 .sidebarFriend {
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .sidebarFriendImg {
@@ -64,4 +66,4 @@
     border-radius: 50%;
     object-fit: cover;
     margin-right: 15px;
-}
+} 

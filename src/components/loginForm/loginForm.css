@@ -1,0 +1,76 @@
+.loginFormWrapper{
+    height: 350px;
+    padding: 20px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.loginInput {
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    font-size: 18px;
+    padding-left: 20px;
+    color: #dcdcdc;
+} 
+
+.loginInput:focus{
+    outline: none;
+}
+
+.loginButton{
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1775ee;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.loginButton:hover {
+    background-color: #156fe5;
+}
+
+::placeholder{
+    color: #a9a9a9;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.loginForgot{
+    text-align: center;
+    color: #1775ee;
+    font-size: 15px;
+}
+
+.loginForgot:hover{
+    text-decoration: underline;
+}
+
+.newAccountButton{
+    height: 50px;
+    width: 245px;
+    border-radius: 10px;
+    border: none;
+    background-color: #34a420;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    align-self: center;
+}
+
+.newAccountButton:hover {
+    background-color: #30961c;
+}
+
+
+.loginBreak {
+    color: #dcdcdc;
+}

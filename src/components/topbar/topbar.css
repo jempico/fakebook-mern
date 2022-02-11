@@ -9,6 +9,10 @@
     z-index: 999;
 }
 
+.topbarContainer {
+    margin: 5px;
+}
+
 .topbarLeft {
     flex: 2;
 }

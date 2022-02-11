@@ -55,3 +55,10 @@
     margin: 0;
     list-style: none;
 }
+
+
+@media (max-width: 1060) {
+    .sideBar{
+        display: none;
+    }
+}

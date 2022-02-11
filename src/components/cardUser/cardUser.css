@@ -1,0 +1,41 @@
+.cardUserWrapper {
+    width: 160px;
+    height: 206px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    margin: 10px; 
+}
+
+.cardUserWrapper:hover {
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68); 
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+}
+
+.cardTopImage {
+    width: 160px;
+    height: 160px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: thin solid #dcdcdc;
+    background-color: #f5f6f7;
+}
+
+.cardBody {
+    width: 160px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 10px 10px;
+    border: thin solid #dcdcdc;
+    border-top: none;
+}
+
+.cardText {
+    font-size: 18px;
+    padding: 12px
+}

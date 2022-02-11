@@ -1,8 +1,33 @@
+import {useState} from "react"
 import "./post.css"
-import {MoreVert} from "@material-ui/icons"
+import {MoreVert} from "@mui/icons-material/"
 import {Users} from "../../dummyData.js";
- 
+
 export default function Post({post}){
+  const [likes, setLikes] = useState(post.like)
+  const [isLiked, setIsLiked] = useState(false)
+  const [commentsAreShown, toggleComments] = useState(false)
+
+  const likeHandler = () => {
+    setIsLiked(prevState => {
+      return !prevState 
+    })
+    setLikes(prevState => {
+      if (isLiked === false) {
+        return prevState + 1;
+      } else {
+        return prevState - 1;
+      }
+    })
+  }
+
+  const commentHandler = () => {
+    toggleComments( prevState => {
+      return !prevState
+    })
+  }
+
+  const commentsList = <div> No to my future self: This should render CommentsList Component</div>
     return(
       <div className="post">
           <div className="postWrapper">
@@ -22,15 +47,16 @@ export default function Post({post}){
               </div>
               <div className="postBottom">
                 <div className="postBottomLeft">
-                    <img className="likeIcon" src="/assets/heart.png" alt="" />
-                    <img className="likeIcon" src="/assets/like.png" alt="" />
-                    <span className="postLikeCounter"> {post.like} users like it</span>
+                    <img className="likeIcon" src={isLiked? "/assets/dislike.png": "/assets/like.png"} alt="" onClick={likeHandler}/>
+                    <span className="postLikeCounter"> {likes} users like it</span>
                 </div>
                 <div className="postBottomRight">
-                    <span className="postCommentText"> {post.comment} comments</span>
+                    <span className="postCommentText" onClick={commentHandler}> {post.comment} comments </span>                    
                 </div>
-
               </div>
+              <div className="postCommentsList">
+                {commentsAreShown && commentsList}
+                </div>
           </div>
       </div>
      )

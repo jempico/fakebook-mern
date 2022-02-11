@@ -2,6 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This is the UI for a full-stack app that I'm buidling with MERN Stack. The app will eventually consume a Rest API built from scratch with Express, MongoDB, OAuth.
 
 ## Stack
 - React
@@ -30,6 +31,10 @@ To get a local copy up and running follow these simple steps.
 4. Add environment variables: edit or create and `.env` file in the root directory with the following data: 
    ```
     REACT_APP_SECRET_KEY=ScsZ2UFeIFwwzsbF_cJuCmbpim9y7WdLO2nCI65coiQ
+   ```
+5. Run the app: 
+   ```sh
+   npm start
    ```
 
 ## Contact

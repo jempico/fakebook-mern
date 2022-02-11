@@ -9,6 +9,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Unsplash Image API
 
 
+## Routes
+So far the app has 2 routes:
+- Home: http://localhost:3000/
+- Login: http://localhost:3000/login
+
+
 ## Installation
 
 To get a local copy up and running follow these simple steps.

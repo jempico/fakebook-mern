@@ -6,9 +6,9 @@ This is the UI for a full-stack app that I'm buidling with MERN Stack. The app w
 
 ## Stack
 - React
+- ContextAPI
+- Axios
 - Material icons MUI
-- Unsplash Image API
-
 
 ## Routes
 So far the app has 2 routes:

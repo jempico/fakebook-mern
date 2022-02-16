@@ -6,6 +6,7 @@ import logoutService from '../../services/logout'
 
 export default function Topbar() {
 
+    // eslint-disable-next-line no-unused-vars
     const {user, isFetching, error, dispatch } = useContext(AuthContext);
 
 

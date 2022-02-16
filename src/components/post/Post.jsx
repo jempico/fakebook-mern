@@ -1,9 +1,9 @@
 import {useState} from "react"
 import "./post.css"
 import {MoreVert} from "@mui/icons-material/"
-import {Users} from "../../dummyData.js";
 
-export default function Post({post}){
+
+export default function Post({post, user}){
   const [likes, setLikes] = useState(post.like)
   const [isLiked, setIsLiked] = useState(false)
   const [commentsAreShown, toggleComments] = useState(false)
@@ -33,8 +33,8 @@ export default function Post({post}){
           <div className="postWrapper">
               <div className="postTop">
                 <div className="postTopLeft">
-                    <img className="postProfileImg" src={Users.filter(u => u.id === post.userId)[0].profilePicture} alt="" />
-                    <span className="postUsername">{Users.filter(u => u.id === post.userId)[0].username}</span>
+                    <img className="postProfileImg" src={user[0].profilePicture} alt="" />
+                    <span className="postUsername">{user[0].username}</span>
                     <span className="postDate">{post.date}</span>
                 </div>
                 <div className="postTopRight">

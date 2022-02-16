@@ -1,0 +1,13 @@
+.notificationWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification {
+    font-size: 14px;
+}
+
+.error {
+    color: red
+}

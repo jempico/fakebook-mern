@@ -1,9 +1,18 @@
 import "./sidebar.css"
 import {RssFeed, Chat, PlayCircleFilled, Group, Bookmark, HelpOutline, WorkOutline, Event, School} from "@mui/icons-material/"
-import {Users} from "../../dummyData.js";
 import CloseFriend from "../../components/closeFriend/CloseFriend";
+import {useState, useEffect} from "react";
 
 export default function Sidebar() {
+  const [userData, setUserData] = useState(null)
+
+  useEffect(()=> {
+    fetch(`https://bored-api.web.app/api/user/list`)
+        .then(res => res.json())
+        .then(data => 
+          setUserData(data))
+  }, [])
+  
   return(
     <div className="sidebar"> 
       <div className="sidebarWrapper">
@@ -52,7 +61,7 @@ export default function Sidebar() {
         <button className="sidebarButton">Show More</button>
         <hr className="sidebarHr" />
         <ul className="sidebarFriendList">
-          {Users.map(u => (<CloseFriend key={u.id} user={u}/>))}
+          {userData && userData.map(u => (<CloseFriend key={u.id} user={u}/>))}
         </ul>
       </div>
     </div>

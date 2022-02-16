@@ -1,9 +1,18 @@
 import "./rightbar.css"
-import {Users} from "../../dummyData.js";
 import Online from "../../components/online/Online";
 import Ad from "../../components/ad/Ad";
+import {useState, useEffect} from "react";
 
 export default function Rightbar(){
+  const [userData, setUserData] = useState(null)
+
+  useEffect(()=> {
+    fetch(`https://bored-api.web.app/api/user/list`)
+        .then(res => res.json())
+        .then(data => 
+          setUserData(data))
+  }, [])
+
   return(
     <div className="rightbarContainer">
         <div className="rightbarWrapper">
@@ -14,7 +23,7 @@ export default function Rightbar(){
             <Ad/>
             <h4 className="rightbarTitle">Online Friends</h4>
             <ul className="rightbarFriendList">
-              {Users.map(u => <Online key={u.id} user={u}/>)}
+              {userData && userData.map(u => <Online key={u.id} user={u}/>)}
             </ul>
         </div>
     </div>

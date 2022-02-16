@@ -1,7 +1,22 @@
 import "./topbar.css"
 import { Search, Person, Chat, Notifications } from "@mui/icons-material/"
+import {useContext} from "react"
+import {AuthContext} from "../../context/AuthContext";
+import logoutService from '../../services/logout'
 
 export default function Topbar() {
+
+    const {user, isFetching, error, dispatch } = useContext(AuthContext);
+
+
+    const handleLogOut = async() => {
+        try {
+            await logoutService.logout( dispatch);
+            window.localStorage.removeItem("loggedUser")
+        }catch(e){
+            console.log(e)
+        }
+    }
     return (
         <div className="topbarContainer">
             <div className="topbarLeft">
@@ -15,8 +30,8 @@ export default function Topbar() {
             </div>
             <div className="topbarRight">
                 <div className="topbarLinks">
-                    <span className="topbarLink">Homepage</span>
-                    <span className="topbarLink">Timeline</span>
+                    <span className="topbarLink">Profile</span>
+                    <span className="topbarLink" onClick={handleLogOut}>Logout</span>
                 </div>
                 <div className="topbarIcons">
                     <div className="topbarIconItem">

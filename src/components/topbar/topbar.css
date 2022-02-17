@@ -24,6 +24,7 @@
     color: white;
     cursor: pointer;
 }
+
 .topbarCenter{
     flex: 5;
 }
@@ -55,8 +56,9 @@
     flex: 2;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
     color: white;
+    margin-right: 10px;
 }
 
 .topbarLink{

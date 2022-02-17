@@ -28,3 +28,7 @@
     cursor: pointer;
     border-bottom: 1px dashed gray;
 }
+
+.rightbarAd {
+    object-fit: cover;
+}

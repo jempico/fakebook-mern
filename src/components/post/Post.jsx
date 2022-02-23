@@ -1,13 +1,15 @@
-import {useState, useEffect} from "react"
-import "./post.css"
-import {MoreVert} from "@mui/icons-material/"
+import {useState, useEffect} from "react";
+import "./post.css";
+import {MoreVert} from "@mui/icons-material/";
 import Comment from "../comment/Comment";
+import DropdownList from "../dropdownList/DropdownList";
 
 export default function Post({post, user, comments}){
   const [likes, setLikes] = useState(post.like)
   const [isLiked, setIsLiked] = useState(false)
   const [commentsAreShown, toggleComments] = useState(false)
   const [userData, setUserData] = useState(null)
+  const [moreVertIsShown, toggleMoreVert] = useState(false)
 
   useEffect(()=> {
     fetch(`https://bored-api.web.app/api/user/list`)
@@ -30,10 +32,16 @@ export default function Post({post, user, comments}){
   }
 
   const commentHandler = () => {
-    toggleComments( prevState => {
+    toggleComments(prevState => {
       return !prevState
     })
   }
+
+  const handleMoreVert = () => {
+    toggleMoreVert(prevState => {
+      return !prevState
+    })
+  } 
 
     return(
       <div className="post">
@@ -44,9 +52,10 @@ export default function Post({post, user, comments}){
                     <span className="postUsername">{user[0].username}</span>
                     <span className="postDate">{post.date}</span>
                 </div>
-                <div className="postTopRight">
-                    <MoreVert/>
-                </div>
+                  <div className="postTopRight" onClick={handleMoreVert}>
+                  <MoreVert/> 
+                      {moreVertIsShown && <DropdownList/>}
+                  </div>
               </div>
               <div className="postCenter">
                 <span className="postText">{post.desc}</span>

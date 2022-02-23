@@ -18,43 +18,43 @@ export default function Sidebar() {
       <div className="sidebarWrapper">
         <ul className="sidebarList">
           <li className="sidebarlistItem">
-            <RssFeed classname="sidebarIcon"/>
+            <RssFeed className="sidebarIcon"/>
             <span className="sidebarListItemText">Feed</span>
           </li>
           <li className="sidebarlistItem">
-            <Chat classname="sidebarIcon"/>
+            <Chat className="sidebarIcon"/>
             <span className="sidebarListItemText">Chat</span>
           </li>
           <li className="sidebarlistItem">
-            <PlayCircleFilled classname="sidebarIcon"/>
+            <PlayCircleFilled className="sidebarIcon"/>
             <span className="sidebarListItemText">Videos</span>
           </li>
           <li className="sidebarlistItem">
-            <Group classname="sidebarIcon"/>
+            <Group className="sidebarIcon"/>
             <span className="sidebarListItemText">Groups</span>
           </li>
           <li className="sidebarlistItem">
-            <Group classname="sidebarIcon"/>
+            <Group className="sidebarIcon"/>
             <span className="sidebarListItemText">Groups</span>
           </li>
           <li className="sidebarlistItem">
-            <Bookmark classname="sidebarIcon"/>
+            <Bookmark className="sidebarIcon"/>
             <span className="sidebarListItemText">Bookmarks</span>
           </li>
           <li className="sidebarlistItem">
-            <HelpOutline classname="sidebarIcon"/>
+            <HelpOutline className="sidebarIcon"/>
             <span className="sidebarListItemText">Questions</span>
           </li>
           <li className="sidebarlistItem">
-            <WorkOutline classname="sidebarIcon"/>
+            <WorkOutline className="sidebarIcon"/>
             <span className="sidebarListItemText">Jobs</span>
           </li>
           <li className="sidebarlistItem">
-            <Event classname="sidebarIcon"/>
+            <Event className="sidebarIcon"/>
             <span className="sidebarListItemText">Events</span>
           </li>
           <li className="sidebarlistItem">
-            <School classname="sidebarIcon"/>
+            <School className="sidebarIcon"/>
             <span className="sidebarListItemText">Courses</span>
           </li>
         </ul>

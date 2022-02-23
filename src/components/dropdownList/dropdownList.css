@@ -1,0 +1,62 @@
+:root {
+    --dropdownList-bc: #ffffff;
+    --dropdownList-hover-bc: #efefef;
+}
+  
+.dropdownListWrapper {
+    position: absolute;
+    right: 5px;
+    top: 40px;
+    width: 300px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68); 
+    box-shadow: 0px 0px 16px -8px rgba(0,0,0,0.68);
+    background-color: var(--dropdownList-bc);
+}
+  
+.dropdownList {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dropdownListItem {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 15px;
+    padding: 5px;
+    border-radius: 5px;
+} 
+
+/* So as to center descriptions with icon+title*/
+.oneLine{
+    align-items: center;
+}
+
+.dropdownListItem:hover {
+    cursor: pointer;
+    background-color: var(--dropdownList-hover-bc);
+}
+
+.dropdownListDesc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dropdownListIcon {
+    margin-right: 10px;
+}
+
+.dropdownListTitle {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.dropdownListInfo {
+    font-size: 12px;
+    margin-top: 5px;
+    font-weight: 300;
+}

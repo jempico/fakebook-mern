@@ -67,6 +67,10 @@
     cursor: pointer;
 }
 
+.topbarLink:hover{
+    border-bottom: 1px solid white;
+}
+
 .topbarIcons {
     display: flex;
 }

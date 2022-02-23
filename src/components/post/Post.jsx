@@ -1,12 +1,20 @@
-import {useState} from "react"
+import {useState, useEffect} from "react"
 import "./post.css"
 import {MoreVert} from "@mui/icons-material/"
+import Comment from "../comment/Comment";
 
-
-export default function Post({post, user}){
+export default function Post({post, user, comments}){
   const [likes, setLikes] = useState(post.like)
   const [isLiked, setIsLiked] = useState(false)
   const [commentsAreShown, toggleComments] = useState(false)
+  const [userData, setUserData] = useState(null)
+
+  useEffect(()=> {
+    fetch(`https://bored-api.web.app/api/user/list`)
+        .then(res => res.json())
+        .then(data => 
+          setUserData(data))
+  }, [])
 
   const likeHandler = () => {
     setIsLiked(prevState => {
@@ -27,7 +35,6 @@ export default function Post({post, user}){
     })
   }
 
-  const commentsList = <div> No to my future self: This should render CommentsList Component</div>
     return(
       <div className="post">
           <div className="postWrapper">
@@ -42,7 +49,7 @@ export default function Post({post, user}){
                 </div>
               </div>
               <div className="postCenter">
-                <span className="postText">{post?.desc}</span>
+                <span className="postText">{post.desc}</span>
                 <img className="postImg" src={post.photo} alt="" />
               </div>
               <div className="postBottom">
@@ -54,9 +61,9 @@ export default function Post({post, user}){
                     <span className="postCommentText" onClick={commentHandler}> {post.comment} comments </span>                    
                 </div>
               </div>
-              <div className="postCommentsList">
-                {commentsAreShown && commentsList}
-                </div>
+              <ul className="postCommentsList">
+                {commentsAreShown && userData && comments.map(c => <Comment key={c.id} comment={c} user={userData.filter(u => u.id === c.userId)[0]}/>)}
+                </ul>
           </div>
       </div>
      )

@@ -59,7 +59,7 @@ export const Posts = [
         date: "5 min ago",
         userId: 1,
         like: 32,
-        comment: 9
+        comment: 3,
     },
     {
         id: 2,
@@ -67,7 +67,7 @@ export const Posts = [
         date: "15 min ago",
         userId: 2,
         like: 2,
-        comment: 1
+        comment: 3,
     },
     {
         id: 3,
@@ -76,7 +76,7 @@ export const Posts = [
         date: "25 min ago",
         userId: 3,
         like: 5,
-        comment: 19
+        comment: 3,
     }, 
     {
         id: 4,
@@ -85,7 +85,7 @@ export const Posts = [
         date: "1 hour ago",
         userId: 4,
         like: 40,
-        comment: 30
+        comment: 3,
     },
     {
         id: 5,
@@ -94,7 +94,7 @@ export const Posts = [
         date: "1 hour ago",
         userId: 5,
         like: 3,
-        comment: 8
+        comment: 2,
     },
     {
         id: 6,
@@ -103,7 +103,7 @@ export const Posts = [
         date: "5 min ago",
         userId: 6,
         like: 32,
-        comment: 9
+        comment: 1,
     },
     {
         id: 7,
@@ -112,7 +112,7 @@ export const Posts = [
         date: "5 min ago",
         userId: 7,
         like: 32,
-        comment: 9
+        comment: 1,
     },
     {
         id: 8,
@@ -121,7 +121,7 @@ export const Posts = [
         date: "5 min ago",
         userId: 8,
         like: 32,
-        comment: 9
+        comment: 0,
     }, 
     {
         id: 9,
@@ -130,7 +130,7 @@ export const Posts = [
         date: "5 min ago",
         userId: 9,
         like: 32,
-        comment: 9
+        comment: 0
     }, 
     {
         id: 10,
@@ -139,6 +139,72 @@ export const Posts = [
         date: "5 min ago",
         userId: 10,
         like: 32,
-        comment: 9
+        comment: 0
     },                            
 ] 
+
+export const Comments = [
+    {
+        id: 1,
+        postId: 1,
+        userId: 2,
+        date: "22h",
+        desc: "This is so cooooollll"
+    },
+    {
+        id: 2,
+        postId: 1,
+        userId: 3,
+        date: "1d",
+        desc: "Indeed yayayay"
+    },
+    {
+        id: 3,
+        postId: 1,
+        userId: 4,
+        date: "1d",
+        desc: "Gimme likesssss"
+    },
+    {
+        id: 4,
+        postId: 2,
+        userId: 5,
+        date: "22h",
+        desc: "Another random comment"
+    },
+    {
+        id: 5,
+        postId: 2,
+        userId: 6,
+        date: "1d",
+        desc: "Where's my food"
+    },
+    {
+        id: 6,
+        postId: 2,
+        userId: 7,
+        date: "3d",
+        desc: "Take my money"
+    },
+    {
+        id: 7,
+        postId: 3,
+        userId: 8,
+        date: "22h",
+        desc: "Yes yes yes"
+    },
+    {
+        id: 8,
+        postId: 3,
+        userId: 9,
+        date: "1d",
+        desc: "Is this real?"
+    },
+    {
+        id: 9,
+        postId: 3,
+        userId: 10,
+        date: "3d",
+        desc: "Good morning"
+    },
+]

@@ -3,13 +3,13 @@ import Share from "../../components/share/Share";
 import Post from "../../components/post/Post";
 import PostSkeleton from "../../components/skeletons/PostSkeleton";
 import {useState, useEffect} from "react";
-import {Comments} from "../../dummyData"
+import {Comments, Posts, Users} from "../../dummyData"
 
 export default function Feed(){
-  const [postData, setPostData] = useState(null)
-  const [userData, setUserData] = useState(null)
+  const [postData, setPostData] = useState(Posts)
+  const [userData, setUserData] = useState(Users)
 
-  useEffect(()=> {
+/*   useEffect(()=> {
     fetch(`https://bored-api.web.app/api/post/list`)
         .then(res => res.json())
         .then(data => 
@@ -21,7 +21,7 @@ useEffect(()=> {
       .then(res => res.json())
       .then(data => 
         setUserData(data))
-}, [])
+}, []) */
      
    return(
     <div className="feed">
